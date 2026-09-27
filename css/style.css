@@ -152,7 +152,9 @@ img { max-width: 100%; display: block; }
   background: #fff;
   border-bottom: 1px solid var(--border);
 }
-.site-header .container { max-width: 1440px; }
+.site-header .container,
+.hero-inner,
+.products .container { max-width: 1536px; padding-left: clamp(16px, 4.3vw, 66px); padding-right: clamp(16px, 4.3vw, 66px); }
 .header-inner {
   display: flex;
   align-items: center;
@@ -228,7 +230,6 @@ img { max-width: 100%; display: block; }
 .hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 1440px;
   padding-top: 64px;
   padding-bottom: 22px;
   pointer-events: none;
@@ -322,7 +323,6 @@ img { max-width: 100%; display: block; }
 
 /* Tarjetas de materiales */
 .products { padding: 12px 0 20px; background: #fff; }
-.products .container { max-width: 1440px; }
 .products-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .product-card {
   display: flex;
@@ -336,18 +336,24 @@ img { max-width: 100%; display: block; }
 .product-card:hover { box-shadow: 0 12px 28px rgba(13,36,71,0.12); transform: translateY(-2px); }
 .product-card img { width: 100%; height: auto; aspect-ratio: 340 / 98; object-fit: cover; }
 .product-body { position: relative; flex: 1; padding: 14px 44px 18px 14px; }
-.product-body h3 { font-size: 1.08rem; margin: 0 0 4px; }
+.product-body h3 { font-size: 1rem; margin: 0 0 4px; }
 .product-body p { font-size: 0.88rem; line-height: 1.4; margin: 0; }
 .product-body .icon { position: absolute; right: 14px; bottom: 16px; width: 20px; height: 20px; stroke-width: 2; color: var(--navy); }
 
 /* Un servicio integral */
-.integral { background: linear-gradient(180deg, #eef3f6, #f6f9fa); padding: 40px 0 52px; }
+.integral { position: relative; overflow: hidden; background: linear-gradient(180deg, #eef3f6, #f6f9fa); padding: 40px 0 52px; }
+.integral-leaves { position: absolute; right: 2%; bottom: -30px; width: 220px; height: 200px; pointer-events: none; }
+.integral-leaves .stem { fill: none; stroke: #5a8f3c; stroke-width: 3; stroke-linecap: round; }
+.integral-leaves .leaf { fill: #5f9f3a; opacity: 0.85; }
+.integral-leaves .leaf-2, .integral-leaves .leaf-4 { fill: #7cb85a; }
 .integral-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.integral .container { max-width: 1300px; }
 .integral-head { text-align: center; }
+.integral-head .hero-eyebrow { text-align: center; }
 .integral-head .hero-eyebrow { font-size: 0.7rem; margin-bottom: 10px; }
-.integral-head h2 { font-size: clamp(1.75rem, 2.5vw, 2.15rem); line-height: 1.12; margin: 0; text-wrap: balance; }
+.integral-head h2 { font-size: clamp(1.6rem, 2.4vw, 2.1rem); line-height: 1.12; margin: 0; }
 .integral-head::after { content: ""; display: block; width: 42px; height: 3px; background: var(--green); margin: 14px auto 0; }
-.integral p { color: var(--navy); font-size: 0.95rem; max-width: 48ch; margin: 0; }
+.integral-inner > p { color: var(--navy); font-size: 0.95rem; max-width: 48ch; margin: 0; }
 
 /* Section head */
 .section-head { text-align: center; max-width: 640px; margin: 0 auto 48px; }
@@ -715,12 +721,17 @@ section { padding: 88px 0; }
 
 /* Responsive */
 @media (max-width: 1500px) {
-  .nav { gap: 16px; }
-  .nav a { font-size: 0.84rem; }
-  .brand-text { font-size: 1.6rem; }
-  .nav a.btn { margin-left: 4px; padding: 11px 16px; font-size: 0.95rem; }
+  .nav { gap: 20px; }
+  .nav a { font-size: 0.86rem; }
 }
-@media (max-width: 1340px) {
+@media (max-width: 1380px) {
+  .nav { gap: 14px; }
+  .nav a { font-size: 0.8rem; }
+  .brand-logo { width: 52px; height: 52px; }
+  .brand-text { font-size: 1.5rem; }
+  .nav a.btn { margin-left: 4px; padding: 10px 14px; font-size: 0.9rem; }
+}
+@media (max-width: 1240px) {
   .nav { display: none; }
   .nav-toggle { display: flex; }
   .site-header.open .nav {
@@ -758,7 +769,7 @@ section { padding: 88px 0; }
   .quote-form { position: relative; left: auto; right: auto; top: auto; bottom: auto; max-width: 520px; border-radius: 6px; }
   .products-grid { grid-template-columns: repeat(2, 1fr); }
   .integral-inner { grid-template-columns: 1fr; gap: 20px; }
-  .integral p { margin-inline: auto; text-align: center; }
+  .integral-inner > p { margin-inline: auto; text-align: center; }
 }
 @media (max-width: 900px) {
   .about-inner,
