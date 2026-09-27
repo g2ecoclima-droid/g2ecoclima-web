@@ -4,14 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>G2 Eco Clima S.L. — Instalación y mantenimiento de climatización</title>
-<meta name="description" content="G2 Eco Clima S.L. — Instalación, mantenimiento y reparación de climatización, aerotermia, calefacción y ventilación en Madrid y alrededores.">
+<meta name="description" content="G2 Eco Clima S.L. — Especialistas en climatización, aerotermia y ventilación para grandes instalaciones (centros comerciales, colegios, oficinas y naves) en Madrid y alrededores.">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; script-src 'self'; frame-src https://www.google.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <link rel="icon" type="image/jpeg" href="assets/logo_g2.jpg">
-<link rel="stylesheet" href="css/fonts.css?v=2">
-<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/fonts.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
+
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
 
 <header class="site-header" id="header">
   <div class="container header-inner">
@@ -38,73 +40,83 @@
 
   <!-- HERO -->
   <section class="hero" id="inicio">
+    <div class="blob blob-1" aria-hidden="true"></div>
+    <div class="blob blob-2" aria-hidden="true"></div>
     <div class="container hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">Instaladora y mantenedora de climatización</p>
-        <h1>Climatización eficiente para tu hogar y tu negocio</h1>
+      <div class="hero-copy reveal in">
+        <p class="eyebrow-v2"><span class="dot"></span> Instalaciones de climatización a gran escala</p>
+        <h1>Especialistas en climatización para <span class="accent">grandes instalaciones</span></h1>
         <p class="hero-lead">
-          En G2 Eco Clima instalamos y mantenemos sistemas de aire acondicionado, aerotermia,
-          calefacción y ventilación, con un enfoque en el ahorro energético y la instalación bien hecha
-          a la primera.
+          Ejecutamos proyectos de climatización, aerotermia y ventilación en centros comerciales,
+          colegios, oficinas y naves industriales — como subcontrata de confianza de las principales
+          contratas. También atendemos instalaciones residenciales.
         </p>
         <div class="hero-actions">
           <a href="#contacto" class="btn btn-primary">Solicitar presupuesto</a>
           <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
         </div>
-        <ul class="hero-badges">
-          <li>Instalación y mantenimiento</li>
-          <li>Particulares y empresas</li>
-          <li>Soluciones eficientes y ecológicas</li>
-        </ul>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="hero-card hero-card--1">
-          <svg viewBox="0 0 24 24" class="icon"><path d="M12 2v20M2 12h20M5 5l14 14M19 5L5 19"/></svg>
-          <span>Aerotermia</span>
+      <div class="collage reveal in" aria-hidden="true">
+        <img class="collage-1" src="assets/proyectos/fachada-general.jpg" alt="">
+        <img class="collage-2" src="assets/proyectos/unidad-conductos.jpg" alt="">
+        <div class="glass-badge badge-clima">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2C9 6 6 9.5 6 13a6 6 0 0012 0c0-3.5-3-7-6-11z"/></svg></div>
+          <span>Climatización</span>
         </div>
-        <div class="hero-card hero-card--2">
-          <svg viewBox="0 0 24 24" class="icon"><path d="M12 3a9 9 0 100 18 9 9 0 000-18zM12 7v5l3 3"/></svg>
-          <span>Mantenimiento 360°</span>
+        <div class="glass-badge badge-vent">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h11"/></svg></div>
+          <span>Ventilación</span>
         </div>
-        <div class="hero-card hero-card--3">
-          <svg viewBox="0 0 24 24" class="icon"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
-          <span>Eficiencia energética</span>
-        </div>
+        <div class="stat-glass"><strong>8+</strong><span>Obras activas</span></div>
       </div>
     </div>
   </section>
 
-  <!-- LOGOS / CONFIANZA -->
-  <section class="trust">
-    <div class="container trust-inner">
-      <p>Trabajamos con materiales y equipos de las principales marcas del sector HVAC</p>
-      <ul class="trust-list">
-        <li>Climatización residencial</li>
-        <li>Climatización comercial</li>
-        <li>Climatización industrial</li>
-      </ul>
+  <!-- ESTADÍSTICAS -->
+  <section class="stats-bar">
+    <div class="container stats-grid">
+      <div class="stat-item reveal">
+        <strong data-count="8">0</strong><span>Obras activas gestionadas</span>
+        <div class="bar"><i data-fill="100"></i></div>
+      </div>
+      <div class="stat-item reveal">
+        <strong data-count="6">0</strong><span>Servicios especializados</span>
+        <div class="bar"><i data-fill="85"></i></div>
+      </div>
+      <div class="stat-item reveal">
+        <strong data-count="2">0</strong><span>Comunidades donde operamos</span>
+        <div class="bar"><i data-fill="60"></i></div>
+      </div>
     </div>
   </section>
 
   <!-- SERVICIOS -->
   <section class="services" id="servicios">
     <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Qué hacemos</p>
+      <div class="section-head reveal">
+        <p class="eyebrow-v2"><span class="dot"></span> Qué hacemos</p>
         <h2>Servicios de climatización</h2>
         <p class="section-lead">Del proyecto a la puesta en marcha, y del mantenimiento a la reparación urgente.</p>
       </div>
 
       <div class="services-grid">
-        <article class="service-card">
+        <article class="service-card tilt reveal">
           <div class="service-icon">
             <svg viewBox="0 0 24 24"><path d="M12 2C9 6 6 9.5 6 13a6 6 0 0012 0c0-3.5-3-7-6-11z"/></svg>
           </div>
-          <h3>Aire acondicionado</h3>
-          <p>Instalación de equipos split, multisplit y conductos, dimensionados a la necesidad real del espacio.</p>
+          <h3>Climatización</h3>
+          <p>Equipos split, multisplit y por conductos, dimensionados a la necesidad real de cada instalación.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card tilt reveal">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h11"/></svg>
+          </div>
+          <h3>Ventilación</h3>
+          <p>Renovación de aire y calidad ambiental interior para naves, oficinas y locales comerciales.</p>
+        </article>
+
+        <article class="service-card tilt reveal">
           <div class="service-icon">
             <svg viewBox="0 0 24 24"><path d="M4 14a8 8 0 0116 0M4 14v6h16v-6M4 14L2 12M20 14l2-2"/></svg>
           </div>
@@ -112,31 +124,23 @@
           <p>Sistemas de aerotermia para calefacción, refrigeración y ACS con máxima eficiencia energética.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card tilt reveal">
           <div class="service-icon">
             <svg viewBox="0 0 24 24"><path d="M12 2v6m0 8v6M2 12h6m8 0h6M5 5l4 4m6 6l4 4M19 5l-4 4m-6 6l-4 4"/></svg>
           </div>
           <h3>Calefacción</h3>
-          <p>Instalación de sistemas de calefacción para vivienda y locales, integrados con climatización.</p>
+          <p>Instalación de sistemas de calefacción integrados con la climatización de todo el edificio.</p>
         </article>
 
-        <article class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h11"/></svg>
-          </div>
-          <h3>Ventilación</h3>
-          <p>Renovación de aire y calidad ambiental interior para viviendas, oficinas y locales comerciales.</p>
-        </article>
-
-        <article class="service-card">
+        <article class="service-card tilt reveal">
           <div class="service-icon">
             <svg viewBox="0 0 24 24"><path d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg>
           </div>
           <h3>Mantenimiento</h3>
-          <p>Contratos de mantenimiento preventivo y revisiones periódicas para alargar la vida útil de tus equipos.</p>
+          <p>Contratos de mantenimiento preventivo y revisiones periódicas para alargar la vida útil de los equipos.</p>
         </article>
 
-        <article class="service-card">
+        <article class="service-card tilt reveal">
           <div class="service-icon">
             <svg viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"/></svg>
           </div>
@@ -150,19 +154,20 @@
   <!-- SOBRE NOSOTROS -->
   <section class="about" id="nosotros">
     <div class="container about-inner">
-      <div class="about-visual" aria-hidden="true">
+      <div class="about-visual reveal" aria-hidden="true">
         <div class="about-stat">
           <strong>+8</strong>
           <span>obras y proyectos gestionados activamente</span>
         </div>
       </div>
-      <div class="about-copy">
-        <p class="eyebrow">Sobre nosotros</p>
-        <h2>Una instaladora que cuida cada detalle, de la propuesta a la factura</h2>
+      <div class="about-copy reveal">
+        <p class="eyebrow-v2"><span class="dot"></span> Sobre nosotros</p>
+        <h2>Especialistas en grandes instalaciones, con la misma exigencia en cada vivienda</h2>
         <p>
-          G2 Eco Clima S.L. es una empresa instaladora y mantenedora de climatización que trabaja tanto
-          para clientes particulares como para negocios y cadenas comerciales. Nos ocupamos de todo el
-          ciclo: presupuesto, instalación, puesta en marcha y mantenimiento posterior.
+          G2 Eco Clima S.L. es una instaladora y mantenedora de climatización centrada en proyectos de
+          gran tamaño — centros comerciales, colegios, oficinas y naves industriales — donde trabajamos
+          habitualmente como subcontrata de confianza de las principales contratas. También atendemos
+          instalaciones residenciales con el mismo nivel de exigencia.
         </p>
         <p>
           Apostamos por soluciones eficientes desde el punto de vista energético — con especial foco en
@@ -181,15 +186,15 @@
   <!-- PROYECTOS -->
   <section class="projects" id="proyectos">
     <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Nuestro trabajo</p>
+      <div class="section-head reveal">
+        <p class="eyebrow-v2"><span class="dot"></span> Nuestro trabajo</p>
         <h2>Proyectos destacados</h2>
         <p class="section-lead">
           Algunas fotos reales de nuestras instalaciones, tomadas durante la propia obra.
         </p>
       </div>
 
-      <div class="projects-grid">
+      <div class="projects-grid reveal">
         <article class="project-card">
           <img class="project-thumb" src="assets/proyectos/unidad-conductos-general.jpg" alt="Instalación de unidad de conductos de climatización en techo">
           <div class="project-body">
@@ -239,8 +244,8 @@
   <!-- CONTACTO -->
   <section class="contact" id="contacto">
     <div class="container contact-inner">
-      <div class="contact-info">
-        <p class="eyebrow">Contacto</p>
+      <div class="contact-info reveal">
+        <p class="eyebrow-v2"><span class="dot"></span> Contacto</p>
         <h2>Cuéntanos qué necesitas</h2>
         <p>Escríbenos con el tipo de instalación o avería, y te responderemos con un presupuesto o una visita técnica.</p>
 
@@ -272,7 +277,7 @@
         </div>
       </div>
 
-      <form class="contact-form" id="contactForm">
+      <form class="contact-form reveal" id="contactForm">
         <div class="form-row">
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" name="nombre" required>
@@ -347,6 +352,6 @@
   </div>
 </div>
 
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
 </body>
 </html>

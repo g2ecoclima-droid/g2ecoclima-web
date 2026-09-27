@@ -81,3 +81,68 @@ if (cookieBanner && cookieAccept) {
     }
   });
 }
+
+// Barra de progreso de scroll
+const progressBar = document.getElementById('progressBar');
+if (progressBar) {
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight || 1) * 100;
+    progressBar.style.width = pct + '%';
+  });
+}
+
+// Animación de aparición al hacer scroll
+const revealTargets = document.querySelectorAll('.reveal');
+if (revealTargets.length && 'IntersectionObserver' in window) {
+  const revealIo = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('in'), i * 60);
+        revealIo.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  revealTargets.forEach((el) => revealIo.observe(el));
+} else {
+  revealTargets.forEach((el) => el.classList.add('in'));
+}
+
+// Contadores animados de la barra de estadísticas
+const statItems = document.querySelectorAll('.stat-item');
+if (statItems.length && 'IntersectionObserver' in window) {
+  const statIo = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const strong = entry.target.querySelector('strong');
+      const bar = entry.target.querySelector('.bar i');
+      const target = parseInt(strong.dataset.count, 10);
+      const fill = parseInt(bar.dataset.fill, 10);
+      let start = null;
+      const dur = 1200;
+      function step(ts) {
+        if (!start) start = ts;
+        const p = Math.min((ts - start) / dur, 1);
+        strong.textContent = Math.round(p * target);
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+      bar.style.width = fill + '%';
+      statIo.unobserve(entry.target);
+    });
+  }, { threshold: 0.4 });
+  statItems.forEach((el) => statIo.observe(el));
+}
+
+// Inclinación 3D de las tarjetas de servicio al mover el ratón
+document.querySelectorAll('.service-card.tilt').forEach((card) => {
+  card.addEventListener('mousemove', (event) => {
+    const rect = card.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+    card.style.transform = `rotateY(${x * 12}deg) rotateX(${-y * 12}deg) translateY(-6px)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+  });
+});
