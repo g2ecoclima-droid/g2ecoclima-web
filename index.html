@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <script src="js/site.js?v=1"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>G2 Eco Clima S.L. — Climatización para grandes instalaciones</title>
+<title>G2 Eco Clima S.L. — Climatización, ventilación e instalaciones en Madrid</title>
 <meta name="description" content="G2 Eco Clima S.L. — Especialistas en climatización, ventilación, conductos URSA Zero y tuberías PPR, cobre e inoxidable, aerotermia para grandes instalaciones (centros comerciales, colegios, oficinas y naves) en Madrid y alrededores.">
 <link rel="canonical" href="https://g2ecoclima.com/">
 
@@ -24,7 +24,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; script-src 'self'; frame-src https://www.google.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <link rel="icon" type="image/jpeg" href="assets/logo_g2.jpg">
 <link rel="stylesheet" href="css/fonts.css?v=5">
-<link rel="stylesheet" href="css/style.css?v=6">
+<link rel="stylesheet" href="css/style.css?v=7">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,20 +54,20 @@
 <header class="site-header" id="header">
   <div class="container header-inner">
     <a href="#inicio" class="brand">
-      <img src="assets/logo_g2_icon.png" alt="" class="brand-logo" width="48" height="48">
-      <span class="brand-text">G2 <strong>Eco Clima</strong><span class="brand-tagline">Climatización · Ventilación · Instalaciones</span></span>
+      <img src="assets/logo_g2_icon.png" alt="" class="brand-logo" width="60" height="60">
+      <span class="brand-text">G2 <strong>Eco Clima</strong></span>
     </a>
 
     <nav class="nav" id="nav" aria-label="Principal">
       <a href="#inicio" class="is-active">Inicio</a>
       <a href="#climatizacion">Climatización</a>
       <a href="#ventilacion">Ventilación</a>
-      <a href="#servicios">Instalaciones</a>
+      <a href="#materiales">Instalaciones</a>
       <a href="#mantenimiento">Mantenimiento</a>
       <a href="#proyectos">Proyectos/Obras</a>
       <a href="#nosotros">Empresa</a>
       <a href="#contacto">Contacto</a>
-      <a href="#contacto" class="btn btn-primary nav-cta"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>Solicitar presupuesto</a>
+      <a href="#presupuesto" class="btn btn-primary">Solicitar presupuesto <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </nav>
 
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -80,47 +80,92 @@
 
   <!-- HERO -->
   <section class="hero" id="inicio">
-    <div class="hero-photo" role="img" aria-label="Sala de máquinas en cubierta instalada por G2 Eco Clima, campus universitario de Somosaguas"></div>
+    <div class="hero-photo" role="img" aria-label="Operarios de G2 Eco Clima montando conductos URSA y Climaver y tuberías PPR, cobre e inoxidable">
+      <form class="quote-form" id="presupuesto">
+        <h2>Solicita tu presupuesto</h2>
+        <p>Cuéntanos tu proyecto y te asesoramos sin compromiso.</p>
+        <label class="quote-field">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.8-3.8a6 6 0 01-7.9 7.9l-6.9 6.9a2.1 2.1 0 01-3-3l6.9-6.9a6 6 0 017.9-7.9l-3.8 3.8z"/></svg>
+          <select id="qServicio" name="servicio" aria-label="Tipo de servicio" required>
+            <option value="">Tipo de servicio</option>
+            <option>Conductos URSA / Climaver</option>
+            <option>Tuberías PPR, cobre o inoxidable</option>
+            <option>Climatización</option>
+            <option>Ventilación</option>
+            <option>Aerotermia</option>
+            <option>Mantenimiento</option>
+            <option>Avería / reparación urgente</option>
+          </select>
+          <svg viewBox="0 0 24 24" class="icon icon-chev" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </label>
+        <label class="quote-field">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <input type="text" id="qUbicacion" name="ubicacion" placeholder="Ubicación del proyecto" aria-label="Ubicación del proyecto" required>
+        </label>
+        <label class="quote-field">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
+          <input type="tel" id="qTelefono" name="telefono" placeholder="Teléfono" aria-label="Teléfono" required>
+        </label>
+        <button type="submit" class="btn btn-primary">Enviar solicitud <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="form-hint">Te contactaremos lo antes posible · <a href="privacidad.html">Privacidad</a></p>
+      </form>
+    </div>
+
     <div class="container hero-inner">
       <div class="hero-copy">
-        <p class="hero-eyebrow">Confort. Eficiencia. Futuro sostenible.</p>
+        <p class="hero-eyebrow">Climatización<span>·</span>Ventilación<span>·</span>Instalaciones</p>
         <h1>
           <span class="hero-brand">G2 <em>Eco Clima</em></span>
-          <span class="hero-title">Soluciones integrales en climatización, ventilación e instalaciones en Madrid</span>
+          <span class="hero-title">Soluciones eficientes para un futuro más sostenible</span>
         </h1>
         <p class="hero-lead">
-          Especialistas en conductos URSA Zero y tuberías PPR, cobre e inoxidable. Proyectos, instalación
-          y mantenimiento para centros comerciales, colegios, oficinas y naves, como subcontrata de
-          confianza de las principales contratas.
+          Instalamos, mantenemos y desarrollamos proyectos de climatización y ventilación con conductos
+          <strong>rectangulares URSA</strong> y <strong>Climaver,</strong> y tuberías <strong>PPR, cobre e inoxidable.</strong>
         </p>
         <div class="hero-actions">
-          <a href="#contacto" class="btn btn-primary"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h8"/></svg>Solicitar presupuesto <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a href="#servicios" class="btn btn-outline-light">Conocer servicios <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="#presupuesto" class="btn btn-primary">Solicitar presupuesto <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="tel:+34687763324" class="btn btn-ghost"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg> Hablar con un técnico</a>
         </div>
+        <ul class="hero-feats">
+          <li><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M11 20A7 7 0 019.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.1-6"/></svg><span>Confort<br>y eficiencia</span></li>
+          <li><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.8-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-1.1-1.5 1.7 1.7 0 00-1.8.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.8 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.1a1.7 1.7 0 001.5-1.1 1.7 1.7 0 00-.3-1.8l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.8.3H9a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.1a1.7 1.7 0 001 1.5 1.7 1.7 0 001.8-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.8V9a1.7 1.7 0 001.5 1H21a2 2 0 110 4h-.1a1.7 1.7 0 00-1.5 1z"/></svg><span>Soluciones<br>a medida</span></li>
+          <li><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/></svg><span>Acompañamiento<br>en todo el proceso</span></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- ESPECIALIDADES -->
-  <section class="specialties" aria-label="Especialidades">
-    <ul class="container specialties-grid">
-      <li class="specialty">
-        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.8-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-1.1-1.5 1.7 1.7 0 00-1.8.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.8 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.1a1.7 1.7 0 001.5-1.1 1.7 1.7 0 00-.3-1.8l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.8.3H9a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.1a1.7 1.7 0 001 1.5 1.7 1.7 0 001.8-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.8V9a1.7 1.7 0 001.5 1H21a2 2 0 110 4h-.1a1.7 1.7 0 00-1.5 1z"/></svg>
-        <div><strong>Ingeniería</strong><span>Soluciones a medida</span></div>
-      </li>
-      <li class="specialty">
-        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M3 9l5-4h13v10l-5 4H3z"/><path d="M3 9h13v10M16 9l5-4"/></svg>
-        <div><strong>Conductos</strong><span>URSA Zero</span></div>
-      </li>
-      <li class="specialty">
-        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M4 21v-8a4 4 0 014-4h7"/><path d="M15 5h5v8h-5zM2 21h6"/></svg>
-        <div><strong>Tuberías</strong><span>PPR, cobre e inoxidable</span></div>
-      </li>
-      <li class="specialty">
-        <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.8-3.8a6 6 0 01-7.9 7.9l-6.9 6.9a2.1 2.1 0 01-3-3l6.9-6.9a6 6 0 017.9-7.9l-3.8 3.8z"/></svg>
-        <div><strong>Mantenimiento</strong><span>Máximo rendimiento</span></div>
-      </li>
-    </ul>
+  <!-- MATERIALES -->
+  <section class="products" id="materiales" aria-label="Materiales con los que trabajamos">
+    <div class="container products-grid">
+      <a class="product-card" href="#presupuesto">
+        <img src="assets/web/servicio-ursa.jpg" alt="Conducto rectangular de panel URSA AIR" loading="lazy" width="1000" height="288">
+        <div class="product-body"><h3>Conductos URSA</h3><p>Máximo rendimiento térmico y acústico para un aire más limpio y eficiente.</p><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </a>
+      <a class="product-card" href="#presupuesto">
+        <img src="assets/web/servicio-climaver.jpg" alt="Conducto rectangular de panel Climaver" loading="lazy" width="1000" height="288">
+        <div class="product-body"><h3>Conductos Climaver</h3><p>Soluciones ligeras y eficientes para instalaciones de climatización.</p><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </a>
+      <a class="product-card" href="#presupuesto">
+        <img src="assets/web/servicio-ppr.jpg" alt="Tuberías de polipropileno PPR" loading="lazy" width="1000" height="288">
+        <div class="product-body"><h3>Tuberías PPR</h3><p>Soluciones fiables y duraderas para instalaciones de climatización.</p><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </a>
+      <a class="product-card" href="#presupuesto">
+        <img src="assets/web/servicio-cobre.jpg" alt="Tuberías de cobre frigorífico y acero inoxidable" loading="lazy" width="1000" height="288">
+        <div class="product-body"><h3>Tuberías de cobre e inoxidable</h3><p>Cobre frigorífico y acero inoxidable: calidad y eficiencia para todo tipo de instalaciones.</p><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVICIO INTEGRAL -->
+  <section class="integral">
+    <div class="container integral-inner">
+      <div class="integral-head">
+        <p class="hero-eyebrow">Un servicio integral</p>
+        <h2>Del proyecto al mantenimiento, siempre a tu lado</h2>
+      </div>
+      <p>En G2 ECO CLIMA S.L. ofrecemos soluciones completas de climatización, ventilación e instalaciones, con un enfoque eficiente, sostenible y adaptado a cada proyecto.</p>
+    </div>
   </section>
 
   <!-- SERVICIOS -->
@@ -356,6 +401,6 @@
   </div>
 </div>
 
-<script src="js/main.js?v=6"></script>
+<script src="js/main.js?v=7"></script>
 </body>
 </html>

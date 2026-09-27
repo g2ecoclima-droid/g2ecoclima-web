@@ -59,6 +59,25 @@ contactForm.addEventListener('submit', (event) => {
   window.location.href = mailto;
 });
 
+// Formulario rápido de presupuesto (portada): igual que el de contacto, abre el
+// programa de correo con la solicitud lista para enviar; no se guarda nada.
+const quoteForm = document.getElementById('presupuesto');
+if (quoteForm) {
+  quoteForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const servicio = document.getElementById('qServicio').value;
+    const ubicacion = document.getElementById('qUbicacion').value.trim();
+    const telefono = document.getElementById('qTelefono').value.trim();
+    const subject = `Solicitud de presupuesto — ${servicio}`;
+    const body = [
+      `Servicio: ${servicio}`,
+      `Ubicación del proyecto: ${ubicacion}`,
+      `Teléfono: ${telefono}`,
+    ].join('\n');
+    window.location.href = `mailto:g2ecoclima@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}
+
 // Mapa de Google bajo demanda: no se conecta con Google hasta que el usuario lo pide.
 const mapContainer = document.getElementById('contactMap');
 const mapConsentBtn = document.getElementById('mapConsentBtn');
