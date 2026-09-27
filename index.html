@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <script src="js/site.js?v=1"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>G2 Eco Clima S.L. — Climatización para grandes instalaciones</title>
-<meta name="description" content="G2 Eco Clima S.L. — Especialistas en climatización, aerotermia y ventilación para grandes instalaciones (centros comerciales, colegios, oficinas y naves) en Madrid y alrededores.">
+<title>G2 Eco Clima S.L. — Climatización, ventilación e instalaciones en Madrid</title>
+<meta name="description" content="G2 Eco Clima S.L. — Especialistas en climatización, ventilación, conductos URSA Zero y tuberías PPR, cobre e inoxidable, aerotermia para grandes instalaciones (centros comerciales, colegios, oficinas y naves) en Madrid y alrededores.">
 <link rel="canonical" href="https://g2ecoclima.com/">
 
 <meta property="og:type" content="website">
@@ -24,7 +24,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; script-src 'self'; frame-src https://www.google.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <link rel="icon" type="image/jpeg" href="assets/logo_g2.jpg">
 <link rel="stylesheet" href="css/fonts.css?v=5">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=7">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,16 +54,20 @@
 <header class="site-header" id="header">
   <div class="container header-inner">
     <a href="#inicio" class="brand">
-      <img src="assets/logo_g2.jpg" alt="G2 Eco Clima" class="brand-logo">
+      <img src="assets/logo_g2_icon.png" alt="" class="brand-logo" width="60" height="60">
       <span class="brand-text">G2 <strong>Eco Clima</strong></span>
     </a>
 
-    <nav class="nav" id="nav">
-      <a href="#servicios">Servicios</a>
-      <a href="#nosotros">Sobre nosotros</a>
-      <a href="#proyectos">Proyectos</a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#inicio" class="is-active">Inicio</a>
+      <a href="#climatizacion">Climatización</a>
+      <a href="#ventilacion">Ventilación</a>
+      <a href="#materiales">Instalaciones</a>
+      <a href="#mantenimiento">Mantenimiento</a>
+      <a href="#proyectos">Proyectos/Obras</a>
+      <a href="#nosotros">Empresa</a>
       <a href="#contacto">Contacto</a>
-      <a href="#contacto" class="btn btn-primary nav-cta">Pide presupuesto</a>
+      <a href="#presupuesto" class="btn btn-primary">Solicitar presupuesto <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </nav>
 
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -76,53 +80,91 @@
 
   <!-- HERO -->
   <section class="hero" id="inicio">
-    <div class="blob blob-1" aria-hidden="true"></div>
-    <div class="blob blob-2" aria-hidden="true"></div>
+    <div class="hero-photo" role="img" aria-label="Operarios de G2 Eco Clima montando conductos URSA y Climaver y tuberías PPR, cobre e inoxidable">
+      <form class="quote-form" id="presupuesto">
+        <h2>Solicita tu presupuesto</h2>
+        <p>Cuéntanos tu proyecto y te asesoramos sin compromiso.</p>
+        <label class="quote-field">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.8-3.8a6 6 0 01-7.9 7.9l-6.9 6.9a2.1 2.1 0 01-3-3l6.9-6.9a6 6 0 017.9-7.9l-3.8 3.8z"/></svg>
+          <select id="qServicio" name="servicio" aria-label="Tipo de servicio" required>
+            <option value="">Tipo de servicio</option>
+            <option>Conductos URSA / Climaver</option>
+            <option>Tuberías PPR, cobre o inoxidable</option>
+            <option>Climatización</option>
+            <option>Ventilación</option>
+            <option>Aerotermia</option>
+            <option>Mantenimiento</option>
+            <option>Avería / reparación urgente</option>
+          </select>
+          <svg viewBox="0 0 24 24" class="icon icon-chev" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </label>
+        <label class="quote-field">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <input type="text" id="qUbicacion" name="ubicacion" placeholder="Ubicación del proyecto" aria-label="Ubicación del proyecto" required>
+        </label>
+        <label class="quote-field">
+          <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg>
+          <input type="tel" id="qTelefono" name="telefono" placeholder="Teléfono" aria-label="Teléfono" required>
+        </label>
+        <button type="submit" class="btn btn-primary">Enviar solicitud <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="form-hint">Te contactaremos lo antes posible · <a href="privacidad.html">Privacidad</a></p>
+      </form>
+    </div>
+
     <div class="container hero-inner">
-      <div class="hero-copy reveal in">
-        <p class="eyebrow-v2"><span class="dot"></span> Instalaciones de climatización a gran escala</p>
-        <h1>Especialistas en climatización para <span class="accent">grandes instalaciones</span></h1>
+      <div class="hero-copy">
+        <p class="hero-eyebrow">Climatización<span>·</span>Ventilación<span>·</span>Instalaciones</p>
+        <h1>
+          <span class="hero-brand">G2 <em>Eco Clima</em></span>
+          <span class="hero-title">Soluciones eficientes para un futuro más sostenible</span>
+        </h1>
         <p class="hero-lead">
-          Ejecutamos proyectos de climatización, aerotermia y ventilación en centros comerciales,
-          colegios, oficinas y naves industriales — como subcontrata de confianza de las principales
-          contratas. También atendemos instalaciones residenciales.
+          Instalamos, mantenemos y desarrollamos proyectos de climatización y ventilación con conductos
+          <strong>rectangulares URSA</strong> y <strong>Climaver,</strong> y tuberías <strong>PPR, cobre e inoxidable.</strong>
         </p>
         <div class="hero-actions">
-          <a href="#contacto" class="btn btn-primary">Solicitar presupuesto</a>
-          <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+          <a href="#presupuesto" class="btn btn-primary">Solicitar presupuesto <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="tel:+34687763324" class="btn btn-ghost"><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg> Hablar con un técnico</a>
         </div>
-      </div>
-      <div class="collage reveal in" aria-hidden="true">
-        <img class="collage-1" src="assets/proyectos/illescas-acumuladores-acs.jpg" alt="">
-        <img class="collage-2" src="assets/proyectos/somosaguas-sala-maquinas.jpg" alt="">
-        <div class="glass-badge badge-clima">
-          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2C9 6 6 9.5 6 13a6 6 0 0012 0c0-3.5-3-7-6-11z"/></svg></div>
-          <span>Climatización</span>
-        </div>
-        <div class="glass-badge badge-vent">
-          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h11"/></svg></div>
-          <span>Ventilación</span>
-        </div>
-        <div class="stat-glass"><strong>8+</strong><span>Obras activas</span></div>
+        <ul class="hero-feats">
+          <li><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M11 20A7 7 0 019.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5.1-6"/></svg><span>Confort<br>y eficiencia</span></li>
+          <li><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.8-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-1.1-1.5 1.7 1.7 0 00-1.8.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.8 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.1a1.7 1.7 0 001.5-1.1 1.7 1.7 0 00-.3-1.8l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.8.3H9a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.1a1.7 1.7 0 001 1.5 1.7 1.7 0 001.8-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.8V9a1.7 1.7 0 001.5 1H21a2 2 0 110 4h-.1a1.7 1.7 0 00-1.5 1z"/></svg><span>Soluciones<br>a medida</span></li>
+          <li><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 00-3-3.9M16 3.1a4 4 0 010 7.8"/></svg><span>Acompañamiento<br>en todo el proceso</span></li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- ESTADÍSTICAS -->
-  <section class="stats-bar">
-    <div class="container stats-grid">
-      <div class="stat-item reveal">
-        <strong data-count="8">0</strong><span>Obras activas gestionadas</span>
-        <div class="bar"><i data-fill="100"></i></div>
+  <!-- MATERIALES -->
+  <section class="products" id="materiales" aria-label="Materiales con los que trabajamos">
+    <div class="container products-grid">
+      <a class="product-card" href="#presupuesto">
+        <img src="assets/web/servicio-ursa.jpg" alt="Conducto rectangular de panel URSA AIR" loading="lazy" width="1000" height="288">
+        <div class="product-body"><h3>Conductos URSA</h3><p>Máximo rendimiento térmico y acústico para un aire más limpio y eficiente.</p><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </a>
+      <a class="product-card" href="#presupuesto">
+        <img src="assets/web/servicio-climaver.jpg" alt="Conducto rectangular de panel Climaver" loading="lazy" width="1000" height="288">
+        <div class="product-body"><h3>Conductos Climaver</h3><p>Soluciones ligeras y eficientes para instalaciones de climatización.</p><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </a>
+      <a class="product-card" href="#presupuesto">
+        <img src="assets/web/servicio-ppr.jpg" alt="Tuberías de polipropileno PPR" loading="lazy" width="1000" height="288">
+        <div class="product-body"><h3>Tuberías PPR</h3><p>Soluciones fiables y duraderas para instalaciones de climatización.</p><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </a>
+      <a class="product-card" href="#presupuesto">
+        <img src="assets/web/servicio-cobre.jpg" alt="Tuberías de cobre frigorífico y acero inoxidable" loading="lazy" width="1000" height="288">
+        <div class="product-body"><h3>Tuberías de cobre e inoxidable</h3><p>Cobre frigorífico y acero inoxidable: calidad y eficiencia para todo tipo de instalaciones.</p><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVICIO INTEGRAL -->
+  <section class="integral">
+    <div class="container integral-inner">
+      <div class="integral-head">
+        <p class="hero-eyebrow">Un servicio integral</p>
+        <h2>Del proyecto al mantenimiento, siempre a tu lado</h2>
       </div>
-      <div class="stat-item reveal">
-        <strong data-count="6">0</strong><span>Servicios especializados</span>
-        <div class="bar"><i data-fill="85"></i></div>
-      </div>
-      <div class="stat-item reveal">
-        <strong data-count="2">0</strong><span>Comunidades donde operamos</span>
-        <div class="bar"><i data-fill="60"></i></div>
-      </div>
+      <p>En G2 ECO CLIMA S.L. ofrecemos soluciones completas de climatización, ventilación e instalaciones, con un enfoque eficiente, sostenible y adaptado a cada proyecto.</p>
     </div>
   </section>
 
@@ -136,7 +178,7 @@
       </div>
 
       <div class="services-grid">
-        <article class="service-card tilt reveal">
+        <article class="service-card tilt reveal" id="climatizacion">
           <div class="service-icon">
             <svg viewBox="0 0 24 24"><path d="M12 2C9 6 6 9.5 6 13a6 6 0 0012 0c0-3.5-3-7-6-11z"/></svg>
           </div>
@@ -144,7 +186,7 @@
           <p>Equipos split, multisplit y por conductos, dimensionados a la necesidad real de cada instalación.</p>
         </article>
 
-        <article class="service-card tilt reveal">
+        <article class="service-card tilt reveal" id="ventilacion">
           <div class="service-icon">
             <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h11"/></svg>
           </div>
@@ -168,7 +210,7 @@
           <p>Instalación de sistemas de calefacción integrados con la climatización de todo el edificio.</p>
         </article>
 
-        <article class="service-card tilt reveal">
+        <article class="service-card tilt reveal" id="mantenimiento">
           <div class="service-icon">
             <svg viewBox="0 0 24 24"><path d="M12 8v4l3 3M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg>
           </div>
@@ -221,58 +263,29 @@
 
   <!-- PROYECTOS -->
   <section class="projects" id="proyectos">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow-v2"><span class="dot"></span> Nuestro trabajo</p>
-        <h2>Proyectos destacados</h2>
-        <p class="section-lead">
-          Fotos reales tomadas durante nuestras propias instalaciones.
-        </p>
+    <div class="container works-inner">
+      <div class="works-intro reveal">
+        <p class="works-eyebrow">Nuestros trabajos</p>
+        <h2>Instalaciones que hablan por sí solas</h2>
+        <p>Climatización, ventilación e instalaciones con materiales de primera calidad para un rendimiento duradero. Fotos reales de nuestras propias obras.</p>
       </div>
-
-      <div class="projects-grid reveal">
-        <article class="project-card">
-          <img class="project-thumb" src="assets/proyectos/somosaguas-sala-maquinas.jpg" alt="Sala de máquinas en cubierta, campus universitario de Somosaguas">
-          <div class="project-body">
-            <span class="project-tag">Gran instalación · Campus universitario</span>
-            <h3>Sala de máquinas en cubierta — Universidad de Somosaguas</h3>
-          </div>
-        </article>
-        <article class="project-card">
-          <img class="project-thumb" src="assets/proyectos/somosaguas-acumulador-bomba-calor.jpg" alt="Bomba de calor Carrier y acumulador de inercia en cubierta">
-          <div class="project-body">
-            <span class="project-tag">Gran instalación · Campus universitario</span>
-            <h3>Bomba de calor y acumulador de inercia</h3>
-          </div>
-        </article>
-        <article class="project-card">
-          <img class="project-thumb" src="assets/proyectos/illescas-acumuladores-acs.jpg" alt="Acumuladores de ACS junto a unidades de climatización, centro deportivo de Illescas">
-          <div class="project-body">
-            <span class="project-tag">Centro deportivo municipal</span>
-            <h3>Producción de ACS — Centro Deportivo de Illescas</h3>
-          </div>
-        </article>
-        <article class="project-card">
-          <img class="project-thumb" src="assets/proyectos/illescas-interacumulador-detalle.jpg" alt="Detalle de interacumulador de ACS">
-          <div class="project-body">
-            <span class="project-tag">Centro deportivo municipal</span>
-            <h3>Detalle de interacumulador de ACS</h3>
-          </div>
-        </article>
-        <article class="project-card">
-          <img class="project-thumb" src="assets/proyectos/rivas-unidades-exteriores-cubierta.jpg" alt="Unidades exteriores y conductos en cubierta, instalación deportiva de Rivas Vaciamadrid">
-          <div class="project-body">
-            <span class="project-tag">Instalación deportiva municipal</span>
-            <h3>Unidades exteriores y conductos — Rivas Vaciamadrid</h3>
-          </div>
-        </article>
-        <article class="project-card">
-          <img class="project-thumb" src="assets/proyectos/rivas-red-conductos-interior.jpg" alt="Red de conductos de climatización en interior de gran nave, Rivas Vaciamadrid">
-          <div class="project-body">
-            <span class="project-tag">Instalación deportiva municipal</span>
-            <h3>Red de conductos en gran nave interior</h3>
-          </div>
-        </article>
+      <div class="works-grid reveal">
+        <a class="work-tile" href="#contacto">
+          <img src="assets/proyectos/rivas-red-conductos-interior.jpg" alt="Red de conductos de climatización en gran nave interior, Rivas Vaciamadrid" loading="lazy">
+          <span class="work-label"><span><strong>Conductos</strong><small>Nave · Rivas Vaciamadrid</small></span><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="work-tile" href="#contacto">
+          <img src="assets/proyectos/somosaguas-acumulador-bomba-calor.jpg" alt="Bomba de calor y acumulador de inercia con tuberías PPR en cubierta, campus de Somosaguas" loading="lazy">
+          <span class="work-label"><span><strong>Tuberías PPR</strong><small>Campus · Somosaguas</small></span><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="work-tile" href="#contacto">
+          <img src="assets/proyectos/illescas-acumuladores-acs.jpg" alt="Acumuladores de ACS junto a unidades de climatización, centro deportivo de Illescas" loading="lazy">
+          <span class="work-label"><span><strong>Producción de ACS</strong><small>Centro deportivo · Illescas</small></span><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <a class="work-tile" href="#contacto">
+          <img src="assets/proyectos/rivas-unidades-exteriores-cubierta.jpg" alt="Unidades exteriores y conductos en cubierta, instalación deportiva de Rivas Vaciamadrid" loading="lazy">
+          <span class="work-label"><span><strong>Equipos en cubierta</strong><small>Deportivo · Rivas Vaciamadrid</small></span><svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
       </div>
     </div>
   </section>
@@ -359,7 +372,7 @@
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
-      <img src="assets/logo_g2.jpg" alt="G2 Eco Clima" class="brand-logo">
+      <img src="assets/logo_g2_icon.png" alt="G2 Eco Clima" class="brand-logo" width="40" height="40">
       <div>
         <span>G2 Eco Clima S.L.</span>
         <p class="footer-address">C/ Bruselas 3, 28983 Parla (Madrid) · 687 76 33 24 / 685 83 80 99</p>
@@ -388,6 +401,6 @@
   </div>
 </div>
 
-<script src="js/main.js?v=6"></script>
+<script src="js/main.js?v=7"></script>
 </body>
 </html>
