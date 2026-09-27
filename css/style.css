@@ -514,7 +514,7 @@ section { padding: 88px 0; }
   padding: 20px;
   text-align: center;
 }
-.contact-map iframe { display: block; border-radius: var(--radius); }
+.contact-map iframe { display: block; border-radius: var(--radius); border: 0; }
 .map-consent-btn {
   display: inline-flex;
   align-items: center;

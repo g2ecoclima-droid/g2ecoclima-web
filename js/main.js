@@ -1,4 +1,20 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+// El CSP de este sitio es `style-src 'self'` (sin 'unsafe-inline'): asignar
+// `elemento.style.propiedad = ...` desde JS cuenta como "estilo en línea" y el
+// navegador lo bloquea en silencio. Para los efectos que sí necesitan un valor
+// dinámico (barra de progreso, barras de estadísticas, inclinación 3D) se
+// inserta una regla en la propia hoja style.css (ya permitida por el CSP) y se
+// modifica esa regla via CSSOM — eso no cuenta como estilo en línea.
+const styleSheet = document.querySelector('link[href^="css/style.css"]').sheet;
+let dynamicRuleCounter = 0;
+function dynamicRule(selectorText, initialDecl) {
+  const idx = styleSheet.cssRules.length;
+  styleSheet.insertRule(`${selectorText} { ${initialDecl} }`, idx);
+  return styleSheet.cssRules[idx];
+}
+function withDynamicId(el) {
+  if (!el.dataset.dynId) el.dataset.dynId = 'dyn' + (dynamicRuleCounter += 1);
+  return el.dataset.dynId;
+}
 
 const header = document.getElementById('header');
 const navToggle = document.getElementById('navToggle');
@@ -53,7 +69,6 @@ if (mapContainer && mapConsentBtn) {
     iframe.src = mapContainer.dataset.mapSrc;
     iframe.width = '100%';
     iframe.height = '220';
-    iframe.style.border = '0';
     iframe.loading = 'lazy';
     iframe.referrerPolicy = 'no-referrer-when-downgrade';
     mapContainer.innerHTML = '';
@@ -85,10 +100,11 @@ if (cookieBanner && cookieAccept) {
 // Barra de progreso de scroll
 const progressBar = document.getElementById('progressBar');
 if (progressBar) {
+  const progressRule = dynamicRule('#progressBar', 'width: 0%;');
   window.addEventListener('scroll', () => {
     const h = document.documentElement;
     const pct = (h.scrollTop) / (h.scrollHeight - h.clientHeight || 1) * 100;
-    progressBar.style.width = pct + '%';
+    progressRule.style.width = pct + '%';
   });
 }
 
@@ -127,7 +143,8 @@ if (statItems.length && 'IntersectionObserver' in window) {
         if (p < 1) requestAnimationFrame(step);
       }
       requestAnimationFrame(step);
-      bar.style.width = fill + '%';
+      const barRule = dynamicRule(`.stat-item .bar i[data-dyn-id="${withDynamicId(bar)}"]`, 'width: 0%;');
+      barRule.style.width = fill + '%';
       statIo.unobserve(entry.target);
     });
   }, { threshold: 0.4 });
@@ -136,13 +153,14 @@ if (statItems.length && 'IntersectionObserver' in window) {
 
 // Inclinación 3D de las tarjetas de servicio al mover el ratón
 document.querySelectorAll('.service-card.tilt').forEach((card) => {
+  const tiltRule = dynamicRule(`[data-dyn-id="${withDynamicId(card)}"]`, 'transform: none;');
   card.addEventListener('mousemove', (event) => {
     const rect = card.getBoundingClientRect();
     const x = (event.clientX - rect.left) / rect.width - 0.5;
     const y = (event.clientY - rect.top) / rect.height - 0.5;
-    card.style.transform = `rotateY(${x * 12}deg) rotateX(${-y * 12}deg) translateY(-6px)`;
+    tiltRule.style.transform = `rotateY(${x * 12}deg) rotateX(${-y * 12}deg) translateY(-6px)`;
   });
   card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
+    tiltRule.style.transform = 'none';
   });
 });
