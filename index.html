@@ -8,8 +8,8 @@
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; script-src 'self'; frame-src https://www.google.com; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 <link rel="icon" type="image/jpeg" href="assets/logo_g2.jpg">
-<link rel="stylesheet" href="css/fonts.css?v=3">
-<link rel="stylesheet" href="css/style.css?v=3">
+<link rel="stylesheet" href="css/fonts.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
@@ -25,7 +25,6 @@
     <nav class="nav" id="nav">
       <a href="#servicios">Servicios</a>
       <a href="#nosotros">Sobre nosotros</a>
-      <a href="#proyectos">Proyectos</a>
       <a href="#contacto">Contacto</a>
       <a href="#contacto" class="btn btn-primary nav-cta">Pide presupuesto</a>
     </nav>
@@ -57,8 +56,13 @@
         </div>
       </div>
       <div class="collage reveal in" aria-hidden="true">
-        <img class="collage-1" src="assets/proyectos/fachada-general.jpg" alt="">
-        <img class="collage-2" src="assets/proyectos/unidad-conductos.jpg" alt="">
+        <!-- Marcadores sin foto a la espera de imágenes reales clasificadas por obra (27/09/2026) -->
+        <div class="collage-1 collage-placeholder">
+          <svg viewBox="0 0 24 24"><path d="M4 21V9l8-6 8 6v12M9 21v-6h6v6"/></svg>
+        </div>
+        <div class="collage-2 collage-placeholder">
+          <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.77z"/></svg>
+        </div>
         <div class="glass-badge badge-clima">
           <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2C9 6 6 9.5 6 13a6 6 0 0012 0c0-3.5-3-7-6-11z"/></svg></div>
           <span>Climatización</span>
@@ -183,63 +187,13 @@
     </div>
   </section>
 
-  <!-- PROYECTOS -->
-  <section class="projects" id="proyectos">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow-v2"><span class="dot"></span> Nuestro trabajo</p>
-        <h2>Proyectos destacados</h2>
-        <p class="section-lead">
-          Algunas fotos reales de nuestras instalaciones, tomadas durante la propia obra.
-        </p>
-      </div>
-
-      <div class="projects-grid reveal">
-        <article class="project-card">
-          <img class="project-thumb" src="assets/proyectos/unidad-conductos-general.jpg" alt="Instalación de unidad de conductos de climatización en techo">
-          <div class="project-body">
-            <span class="project-tag">Aerotermia por conductos</span>
-            <h3>Montaje de unidad interior de conductos en falso techo</h3>
-          </div>
-        </article>
-        <article class="project-card">
-          <img class="project-thumb" src="assets/proyectos/unidad-conductos.jpg" alt="Unidad de conductos instalada con conexiones de cobre">
-          <div class="project-body">
-            <span class="project-tag">Aerotermia por conductos</span>
-            <h3>Conexiones frigoríficas y de desagüe de la unidad interior</h3>
-          </div>
-        </article>
-        <article class="project-card">
-          <img class="project-thumb" src="assets/proyectos/ceiling-detalle.jpg" alt="Detalle de tuberías frigoríficas aisladas en techo">
-          <div class="project-body">
-            <span class="project-tag">Detalle de obra</span>
-            <h3>Distribución y aislamiento de líneas frigoríficas</h3>
-          </div>
-        </article>
-        <article class="project-card">
-          <img class="project-thumb" src="assets/proyectos/cableado-conductos.jpg" alt="Cableado y conductos de climatización en obra">
-          <div class="project-body">
-            <span class="project-tag">Detalle de obra</span>
-            <h3>Cableado y paso de instalaciones en falso techo</h3>
-          </div>
-        </article>
-        <article class="project-card">
-          <img class="project-thumb" src="assets/proyectos/fachada-general.jpg" alt="Paso de tuberías de climatización por fachada exterior">
-          <div class="project-body">
-            <span class="project-tag">Instalación exterior</span>
-            <h3>Paso de tuberías por fachada hasta la unidad exterior</h3>
-          </div>
-        </article>
-        <article class="project-card">
-          <img class="project-thumb" src="assets/proyectos/fachada-detalle.jpg" alt="Detalle de conexiones exteriores de climatización">
-          <div class="project-body">
-            <span class="project-tag">Instalación exterior</span>
-            <h3>Detalle de conexiones y sujeciones en fachada</h3>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+  <!--
+    PROYECTOS: sección retirada temporalmente a petición de David (27/09/2026)
+    hasta que envíe fotos reales clasificadas por obra. El marcado original
+    (con las 6 fotos genéricas de una sola instalación sin obra asociada)
+    queda en el historial de git para restaurarlo o adaptarlo cuando lleguen
+    las fotos nuevas. El enlace "Proyectos" del menú también se ha quitado.
+  -->
 
   <!-- CONTACTO -->
   <section class="contact" id="contacto">
@@ -352,6 +306,6 @@
   </div>
 </div>
 
-<script src="js/main.js?v=3"></script>
+<script src="js/main.js?v=4"></script>
 </body>
 </html>

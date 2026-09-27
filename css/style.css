@@ -252,6 +252,23 @@ img { max-width: 100%; display: block; }
 .collage-2 { width: 210px; height: 210px; bottom: 0; right: 10px; transform: rotate(5deg); z-index: 3; animation-delay: -2.5s; }
 @keyframes bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
 
+/* Marcador temporal mientras no hay foto real asignada a esta obra */
+.collage-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(150deg, var(--blue-dark), var(--navy));
+}
+.collage-placeholder svg {
+  width: 34%;
+  height: 34%;
+  fill: none;
+  stroke: rgba(255,255,255,0.5);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .glass-badge {
   position: absolute;
   display: flex;
