@@ -168,7 +168,7 @@ img { max-width: 100%; display: block; }
   margin-right: auto;
   flex-shrink: 0;
 }
-.brand-logo { width: 60px; height: 60px; object-fit: contain; }
+.brand-logo { width: 57px; height: 60px; object-fit: contain; }
 .brand-text {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -177,7 +177,7 @@ img { max-width: 100%; display: block; }
   color: var(--navy);
   text-transform: uppercase;
 }
-.brand-text strong { font-weight: 500; color: var(--green); letter-spacing: 0.04em; }
+.brand-text strong { font-weight: 500; color: var(--green); letter-spacing: 0.04em; margin-left: 0.18em; }
 
 .nav { display: flex; align-items: center; gap: 24px; }
 .nav a {
@@ -678,12 +678,8 @@ section { padding: 88px 0; }
   font-weight: 600;
 }
 .footer-brand .brand-logo {
-  box-sizing: content-box;
-  width: 40px;
-  height: 40px;
-  padding: 6px;
-  background: #fff;
-  border-radius: 12px;
+  width: 44px;
+  height: 46px;
   flex-shrink: 0;
 }
 .footer-address {
