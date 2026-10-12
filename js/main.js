@@ -32,7 +32,7 @@ document.querySelectorAll('#nav a').forEach((link) => {
 });
 
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (event) => {
+if (contactForm) contactForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
   if (!document.getElementById('consentimiento').checked) {
