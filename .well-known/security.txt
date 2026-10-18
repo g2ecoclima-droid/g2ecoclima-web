@@ -1,3 +1,4 @@
-Contact: mailto:g2ecoclima@gmail.com
+Contact: mailto:info@g2ecoclima.com
 Preferred-Languages: es, en
+Canonical: https://g2ecoclima.com/.well-known/security.txt
 Expires: 2027-09-27T00:00:00.000Z
