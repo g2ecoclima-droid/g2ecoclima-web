@@ -35,7 +35,8 @@ Responde siempre en español (petición permanente de David).
 
 ## Reseñas de Google
 
-- Enlace del Perfil de Empresa: `https://g.page/r/CfiXOBdrvdRMEBI/review` (QR en `assets/web/qr-resenas-g2.png`).
+- Enlace para dejar reseña: `https://g.page/r/CfiXOBdrvdRMEBI/review` (QR en `assets/web/qr-resenas-g2.png`).
+- Ficha del Perfil de Empresa en Google Maps (dada por David el 23/10/2026): `https://maps.app.goo.gl/mpjvsKkcFWAb2tMS7` -- va en `hasMap` y `sameAs` de los datos estructurados de `index.html`.
 - Mismo QR en presupuestos y partes de correctivo (repo `g2-agentes-financieros`, `src/resenas_google.py`).
 - **Pendiente:** cuando haya reseñas reales en Google, David pasará 2-3 para mostrarlas en la sección `#resenas` (hoy solo QR + botón, sin textos de ejemplo).
 - Normas de Google: no ofrecer nada a cambio y pedirla a todos por igual.
