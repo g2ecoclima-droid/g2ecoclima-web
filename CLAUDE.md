@@ -23,6 +23,8 @@ Responde siempre en español (petición permanente de David).
 - Las propuestas A-E están en el lienzo de diseño (Artifact privado de David): https://claude.ai/artifact/FQH7E3Ki3kwxQtt14fNkBb
 - Imágenes de la página en **WebP** con `width`/`height` (los `.jpg` originales se conservan). Imagen para compartir: `assets/web/og-g2ecoclima.jpg` (1200x630).
 - Sin aviso de cookies: la web no guarda nada en el navegador. Si algún día se añade analítica o un mapa, hay que volver a ponerlo.
+- **Ampliación del 02/11/2026 (propuesta F, puntos aprobados por David):** aviso de averías arriba, compromisos junto al botón principal, sectores (con una página por sector: `centros-comerciales.html`, `colegios.html`, `oficinas.html`, `naves-industriales.html`, generadas con la misma plantilla), «Cómo trabajamos» con el texto de David, mantenimiento con botón propio (preselecciona «Mantenimiento» en el formulario con `data-servicio`), zona de trabajo (solo sitios con obra real), preguntas frecuentes (también como `FAQPage` en los datos estructurados), «¿Quieres pertenecer a este equipo?» (CV a info@) y barra fija Llamar/Presupuesto en el móvil.
+- **Pendiente de datos de David:** plazo del presupuesto y años de garantía (para los compromisos), si el 687 tiene WhatsApp (botón en la barra del móvil), logos de clientes con permiso y 2-3 reseñas reales.
 - Secciones: portada, garantías (RITE 13-B-D20-00207251, gases fluorados, grandes instalaciones, mantenimiento propio), servicios, materiales (URSA, Climaver, PPR, cobre/inox), obras reales (Somosaguas, Illescas, Rivas), **reseñas** (QR + botón a Google), presupuesto (formulario `#presupuesto`).
 
 ## Formulario de presupuesto (18/10/2026)
