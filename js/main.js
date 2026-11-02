@@ -83,6 +83,17 @@ if (quoteForm) {
   });
 }
 
+// Botones que llevan al formulario con un servicio ya elegido
+// (p. ej. «Pedir plan de mantenimiento»).
+document.querySelectorAll('a[data-servicio]').forEach((enlace) => {
+  enlace.addEventListener('click', () => {
+    const select = document.getElementById('qServicio');
+    if (!select) return;
+    const opcion = Array.from(select.options).find((o) => o.value === enlace.dataset.servicio);
+    if (opcion) select.value = opcion.value;
+  });
+});
+
 // Barra de progreso de scroll
 const progressBar = document.getElementById('progressBar');
 if (progressBar) {
